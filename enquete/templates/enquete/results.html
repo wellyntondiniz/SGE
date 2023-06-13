@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<h1>{{ question.question_text }}</h1>
+
+<body>
+<ul>
+    {% for option in question.option_set.all %}
+        <li>{{ option.option_text }} -- {{ option.votes }}</li>
+    {% endfor %}
+</ul>
+
+<a href="{% url 'enquete:vote' question.id %}">Votar novamente?</a>
+<a href="{% url 'enquete:index' %}">Ver outras questões?</a>
+
+
+</body>
+</html>
