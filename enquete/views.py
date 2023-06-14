@@ -20,7 +20,7 @@ def vote(request, question_id):
    except KeyError:
       return render(request, 'enquete/vote.html', {
           'question': question,
-          'error_message': "Você deve selecionar uma opção",
+          'error_message': "Selecione uma opção",
       })
    else:
        selected_option.votes += 1
