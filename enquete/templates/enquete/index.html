@@ -27,7 +27,7 @@
         <h3 class="text-center">Escolha uma enquete:</h3>
         <ul class="list-unstyled">
             {% for question in questions %}
-                <li><a href="{% url 'enquete:vote' question.id %}" class="menu-button">{{ question.question_text }}</a></li>
+                <li> {{ question.question_text }} </li>
             {% endfor %}
         </ul>
     </div>

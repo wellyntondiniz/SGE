@@ -1,7 +1,7 @@
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render, get_object_or_404
-from .models import Question
 from django.urls import reverse
+from enquete.models import Question
 
 def index(request):
     questions = Question.objects.order_by('question_text')
